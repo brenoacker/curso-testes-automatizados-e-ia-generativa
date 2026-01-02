@@ -6,4 +6,12 @@ export default defineConfig({
     fixturesFolder: false,
     supportFile: false,
   },
+
+  component: {
+    devServer: {
+      framework: "react",
+      bundler: "vite",
+    },
+    specPattern: ["cypress/component/**/*.cy.{ts,tsx}", "src/**/*.cy.{ts,tsx}"],
+  },
 });
